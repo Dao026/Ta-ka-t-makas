@@ -1,0 +1,61 @@
+import time
+import random
+
+# Kodunuzu buraya yazınız
+
+
+a = 0
+b = 0
+
+while True:
+    x = random.randint(1, 3)
+    z = input("kağıt makas taş: ")
+    print("bekleyin bilgisiyar seçiyor...")
+    time.sleep(3)
+    if x == 1 and z == "kağıt" :
+        print("bilgisiyar kağıt seçti")
+        print("berabere")
+    elif x == 2 and z == "makas":
+        print("bilgisiyar makas seçti")
+        print("berabere")
+    elif x == 3 and z == "taş":
+        print("bilgisiyar taş seçti")
+        print("berabere")
+    elif z == "kağıt" and x == 3:
+        a = a+1
+        print("bilgisiyar taş seçti")
+        print("Kağıt taşa karşı kazanır")
+        print("senin puanın", a)
+        print("bilgisiyarın puanı: ", b)
+    elif z == "taş" and x == 2:
+        a = a+1
+        print("bilgisiyar makas seçti")
+        print("Taş makasa karşı kazanır")
+        print("senin puanın: ", a)
+        print("bilgisiyarın puanı: ", b)
+    elif z == "makas" and x == 1:
+        a = a+1
+        print("bilgisiyar kağıt seçti")
+        print("Makas kağıda karşı kazanır")
+        print("senin puanın: ", a)
+        print("bilgisiyarın puanı: ", b)
+    elif z == "makas" and x == 3:
+        b = b+1
+        print("bilgisiyar taş seçti")
+        print("Taş makasa karşı kazanır")
+        print("senin puanın: ", a)
+        print("bilgisiyarının puanı:", b)
+    elif z == "kağıt" and x == 2:
+        b = b+1
+        print("bilgisiyar makas dedi")
+        print("Makas kağıda karşı kazanır")
+        print("senin puanın: ", a)
+        print("bilgisiyarının puanı:", b)
+    elif z == "taş" and x == 1:
+        b = b+1
+        print("bilgisiyar kağıt seçti")
+        print("Kağıt taşa karşı kazanır")
+        print("senin puanın: ", a)
+        print("bilgisiyarının puanı:", b)
+    else:
+        print("böyle bir seçenek yok")
